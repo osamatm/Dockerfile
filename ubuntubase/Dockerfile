@@ -4,9 +4,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # python-pip is not available in ubuntu20.04. Removed python & python-pip
 RUN apt-get update && \
-    apt-get install -y build-essential git locales tree vim sudo less tzdata zip bash-completion npm && \
-    apt-get install -y python3 python3-pip && \
-    npm install -y tldr
+    apt-get install -y build-essential git locales tree vim sudo less tzdata zip bash-completion tldr && \
+    apt-get install -y python3 python3-pip
+    # npm install -y tldr
 #    apt-get clean && rm -rf /tmp/* /usr/share/doc/* /usr/share/info/* /var/tmp/*
 
 #RUN pip install cmake --upgrade
@@ -29,4 +29,4 @@ RUN mkdir ${HOMEDIR}/workspace ${HOMEDIR}/Configuration ${HOMEDIR}/shared && \
 
 VOLUME ["${HOMEDIR}/shared"]
 
-CMD /bin/bash
+CMD ["/bin/bash"]

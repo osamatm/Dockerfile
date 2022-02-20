@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  training:
+    build: .
+    image: cpp/work:0.2
+    container_name: cpptraining
+    volumes:
+      - C:\DATA\Docker\DockerVolumes\cpptraining:/home/oh/shared
+    stdin_open: true
+    tty: true
