@@ -3,9 +3,9 @@ version: '3.7'
 services:
   training:
     build: .
-    image: cpp/work:0.2
-    container_name: cpptraining
+    image: cpp/work:0.2 # docker build --tag cpp/work:0.2 .
+    container_name: cpptraining # --name cpptraining
     volumes:
       - C:\DATA\Docker\DockerVolumes\cpptraining:/home/oh/shared
-    stdin_open: true
-    tty: true
+    stdin_open: true # -i (interactive)
+    tty: true # -t (tty)
