@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  buildfarm:
+    build: .
+    image: cicd/build:0.1 # docker build --tag cicd/build:0.1 .
+    container_name: buildnode # --name buildnode
+    volumes:
+      - C:\DATA\Docker\DockerVolumes\cicd\build:/home/oh/shared
+    stdin_open: true # -i (interactive)
+    tty: true # -t (tty)
